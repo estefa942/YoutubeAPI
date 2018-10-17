@@ -1,0 +1,57 @@
+@import '../../styles/var';
+
+*{
+    font-family: $font-family;
+}
+.navbar{
+    background-color: $green;
+    display: flex;
+    width: 100%;
+     
+    .form-inline{
+        .form-control{
+            border-radius: 15px 0 0 15px;
+
+            &:focus{
+                border-color: $light-green;
+            }
+        }
+
+        .btn{
+            background-color:$white;
+            border-radius: 0 15px 15px 0;
+            
+            &:hover{
+                background-color: $light-green;
+            }
+        }
+    }
+}
+
+.list-videos{
+    display: flex;
+    width: 100%;
+    justify-content: center;
+    .card{
+        font-size: 12px;
+        &:hover{
+            border-color: $light-green;
+        }
+    }
+}
+
+
+.play-container{
+    width: 100%;
+    display: flex;
+    flex-flow: row wrap;
+
+    &__video{
+        flex: 60%;
+    }
+    &__information {
+        flex: 40%;
+        background-color: aqua;
+        overflow: auto;
+    }
+}
