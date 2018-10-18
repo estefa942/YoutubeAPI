@@ -1,4 +1,4 @@
-# Youtube
+# YoutubeAPI
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 6.2.4.
 
@@ -25,3 +25,24 @@ Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protrac
 ## Further help
 
 To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI README](https://github.com/angular/angular-cli/blob/master/README.md).
+
+# YOUTUBE API
+
+The purpose of the application is to show a list of videos (from youtube), and
+allow the user to watch and search them.
+
+When executing the application, the first thing you will see is something like this:
+
+![alt text](https://raw.githubusercontent.com/estefa942/YoutubeAPI/master/src/assets/appimg/app1.png)
+
+Where the most popular videos of the United States will be shown.
+
+You can also search whatever you want and you will see 6 results and play any of them:
+
+![alt text](https://raw.githubusercontent.com/estefa942/YoutubeAPI/master/src/assets/appimg/app2.png)
+
+![alt text](https://raw.githubusercontent.com/estefa942/YoutubeAPI/master/src/assets/appimg/app3.png)
+
+Developed by: Estefany Muriel Cano.
+
+
