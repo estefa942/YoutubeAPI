@@ -9,9 +9,14 @@ export class UrlPipe implements PipeTransform {
   constructor(private sanitizer:DomSanitizer){
 
   }
-  //Por la seguridad de Angular no permite mostrar todas las URL
+  /**
+   * This helps preventing Cross Site Scripting 
+   * Security bugs (XSS) by sanitizing values to be safe to use
+   * @param idVideo 
+   * @param url 
+   */
   transform(idVideo: any, url?: any): any {
-    return this.sanitizer.bypassSecurityTrustResourceUrl(url+idVideo)
+    return this.sanitizer.bypassSecurityTrustResourceUrl(url+idVideo+"?autoplay=1")
   }
 
 }

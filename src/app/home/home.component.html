@@ -1,4 +1,6 @@
 
+<div class="col-sm-12 container">
+  <!--navbar-->
   <nav class="navbar">
     <a class="navbar__title" alt="Experimentality"> <img src="/src/assets/logo.png">Experimentality</a>
     <form class="form-inline">
@@ -6,29 +8,35 @@
       <button (click)="searchVideo()" class="btn btn-outline-success my-2 my-sm-0" type="submit">Buscar</button>
     </form>
   </nav>
+<!--List of recommended or found videos-->
+<div class="col-sm-12 title-section">{{titleList}}</div>
 
-
-
-<div class="row list-videos">
-  <div class="card col-md" *ngFor="let video of videos" >
-    <img class="card-img-top" src="{{video.snippet.thumbnails.high.url}}" (click)="playVideo(video.id, video.snippet.title, video.snippet.description)" alt="Card image cap">
+<section class="col-sm-12 list-videos">
+  <article class="card col-md" (click)="playVideo(video.id, video.snippet.title, video.snippet.description)" *ngFor="let video of videos" >
+    <img class="card-img-top" src="{{video.snippet.thumbnails.high.url}}"  alt="Card image cap">
     <div class="card-body">
       <p class="card-title">{{video.snippet.title}}</p>      
     </div>
-  </div>
-</div>
+  </article>
+</section>
 
+<!--section to show the video -->
+<div class="col-sm-12 title-section">{{titlePlay}}</div>
 
-<div class="row play-container" >
-  <div class="play-container__video">
+<section class="col-sm-12 play-container" >
+  <!--video-->
+  <article class="play-container__video content">
     <iframe class=" player  " id="ytplayer" type="text/html" width="720" height="405" [src]=" idVideo | url:'https://www.youtube.com/embed/'"
     frameborder="0" allowfullscreen>
   </iframe>
-  </div>
-  <div class="play-container__information ">
-    <div class="card-body col-xs-6">
+</article>
+  <!--video information-->
+  <section class="play-container__information content">
+    <article class="card-body col-xs-6">
       <h5 class="card-title">{{title}}</h5>
       <p class="card-text">{{description}}</p>
-    </div>
-  </div>
-</div>
+    </article>
+  </section>
+</section>
+</div>  
+ 
